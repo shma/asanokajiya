@@ -1,0 +1,173 @@
+@charset "UTF-8";
+body {
+  margin: 0px;
+  font-size: 22px;
+  font-family: Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  -webkit-font-feature-settings: "palt" 2;
+          font-feature-settings: "palt" 2;
+  background-color: #e6e6e6; }
+
+.menu {
+  background-color: #fff; }
+
+.parallaxParent {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center; }
+
+.logo {
+  width: 350px; }
+
+.logo_y {
+  width: 200px; }
+
+.parallaxParent > * {
+  height: 100%;
+  position: relative;
+  top: -50%; }
+
+.heroParent {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/box1.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 要素をflexboxに対応させる */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 縦方向の中央揃え */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* 横方向の中央揃え */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* 子要素の並びを上から下にする（要素の改行に対応） */
+  background-size: cover;
+  background-position: center; }
+
+.parallaxBack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 要素をflexboxに対応させる */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 縦方向の中央揃え */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* 横方向の中央揃え */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* 子要素の並びを上から下にする（要素の改行に対応） */ }
+
+.parallaxMenu {
+  color: #fff;
+  font-size: 40px; }
+
+.s1 {
+  background-color: #fff;
+  min-height: 100px; }
+
+.s2 {
+  background-color: #fff;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.desc {
+  max-width: 800px;
+  padding: 50px; }
+
+.desc h2 {
+  margin-bottom: 20px; }
+
+.desc p {
+  font-size: 18px;
+  line-height: 180%; }
+
+.s3 {
+  background-color: #fff;
+  max-width: 100vw;
+  min-width: 500px; }
+
+.contactForm {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden; }
+
+.contactForm iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important; }
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0px; }
+
+.main-nav li {
+  list-style: none; }
+
+.main-nav a {
+  margin: 10px;
+  color: #000;
+  display: block;
+  padding: 15px;
+  text-decoration: none; }
+  .main-nav a:hover {
+    color: #ff3e09; }
+
+.separator {
+  margin-top: 22px; }
+
+.more {
+  color: #ff3e09;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: center; }
+  .more:hover {
+    color: #ff8f30; }
+
+#foot {
+  min-height: 100px;
+  background-color: #e6e6e6; }
+
+.snsLink {
+  color: #000; }
+  .snsLink:hover {
+    color: #444444; }
+
+.fa {
+  font-size: 40px;
+  margin-left: 20px; }
