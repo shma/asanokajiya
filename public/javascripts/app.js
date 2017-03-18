@@ -7,22 +7,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js')
 
 "use strict";
 
-
-
 $(() => {
-  var h = $(window).height();
-  $('#main-contents').css('display','none');
-  $('#loader-bg ,#loader').height(h).css('display','block');
-
-
-});
-
-$(window).on('load', function() {
-    $('#loader-bg').delay(900).fadeOut(800);
-    $('#loader').delay(600).fadeOut(300);
-    $('#main-contents').css('display', 'block');
-
-
 // init controller
 var controller = new scrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
@@ -64,5 +49,4 @@ $(document).on("click", "a[href^='#']", function (e) {
       history.pushState("", document.title, id);
     }
   }
-});
 });
