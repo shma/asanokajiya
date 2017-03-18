@@ -23,7 +23,7 @@ body {
 }
 
 .logo_y {
-  width: 200px;
+  width: 150px;
 }
 
 .parallaxParent > * {
@@ -131,7 +131,6 @@ body {
 }
 
 
-
 .more {
   color: #ff3e09;
   font-size: 18px;
@@ -150,6 +149,9 @@ body {
 
 .snsLink {
     color: #000;
+    &:visited {
+      color: #000;
+    }
     &:hover {
     color: #444444;
   }

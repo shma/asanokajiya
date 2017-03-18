@@ -8,10 +8,20 @@ import browser from 'browser-sync'
 import nodemon from 'gulp-nodemon'
 import babel from 'gulp-babel'
 import babelify from 'babelify'
+import imagemin from 'gulp-imagemin'
 
 function reload() {
   browser.reload({ stream: false });
 };
+
+const imagePath = {
+  src: 'public/images/',
+  dist: 'public/dist/images/'
+};
+
+gulp.task('optimizeImage', function() {
+  return gulp.src(imagePath.src + '**/*').pipe(imagemin()).pipe(gulp.dest(imagePath.dist));
+});
 
 gulp.task('browsersync', function() {
   browser.init({
