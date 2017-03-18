@@ -33153,16 +33153,6 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
 "use strict";
 
 (0, _jquery2.default)(function () {
-  var h = (0, _jquery2.default)(window).height();
-  (0, _jquery2.default)('#main-contents').css('display', 'none');
-  (0, _jquery2.default)('#loader-bg ,#loader').height(h).css('display', 'block');
-});
-
-(0, _jquery2.default)(window).on('load', function () {
-  (0, _jquery2.default)('#loader-bg').delay(900).fadeOut(800);
-  (0, _jquery2.default)('#loader').delay(600).fadeOut(300);
-  (0, _jquery2.default)('#main-contents').css('display', 'block');
-
   // init controller
   var controller = new _scrollmagic2.default.Controller({ globalSceneOptions: { triggerHook: "onEnter", duration: "200%" } });
 
@@ -33173,6 +33163,17 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
   new _scrollmagic2.default.Scene({ triggerElement: "#workshop" }).setTween("#workshop > div", { y: "100%", ease: Linear.easeNone }).addTo(controller);
   new _scrollmagic2.default.Scene({ triggerElement: "#about" }).setTween("#about > div", { y: "100%", ease: Linear.easeNone }).addTo(controller);
   new _scrollmagic2.default.Scene({ triggerElement: "#contact" }).setTween("#contact > div", { y: "100%", ease: Linear.easeNone }).addTo(controller);
+
+  var nav = (0, _jquery2.default)('#menu'),
+      offset = nav.offset();
+  (0, _jquery2.default)(window).scroll(function () {
+    console.log("scroll");
+    if ((0, _jquery2.default)(window).scrollTop() > offset.top) {
+      nav.addClass('fixed');
+    } else {
+      nav.removeClass('fixed');
+    }
+  });
 
   var tween = TweenMax.from("#animate", 0.5, { autoAlpha: 0, scale: 0.7 });
 

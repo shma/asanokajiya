@@ -22,6 +22,13 @@ body {
   width: 350px;
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
 .logo_y {
   width: 150px;
 }

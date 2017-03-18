@@ -29,24 +29,37 @@ new scrollMagic.Scene({triggerElement: "#contact"})
       .setTween("#contact > div", {y: "100%", ease: Linear.easeNone})
       .addTo(controller)
 
+var nav = $('#menu'),
+offset = nav.offset();
+$(window).scroll(function () {
+  console.log("scroll");
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+
+
 var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
 
 controller.scrollTo(function (newpos) {
   TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
 });
 
-//  bind scroll to anchor links
-$(document).on("click", "a[href^='#']", function (e) {
-  var id = $(this).attr("href");
-  if ($(id).length > 0) {
-    e.preventDefault();
+  //  bind scroll to anchor links
+  $(document).on("click", "a[href^='#']", function (e) {
+    var id = $(this).attr("href");
+    if ($(id).length > 0) {
+      e.preventDefault();
 
-    // trigger scroll
-    controller.scrollTo(id);
+      // trigger scroll
+      controller.scrollTo(id);
 
-    // if supported by the browser we can even update the URL.
-    if (window.history && window.history.pushState) {
-      history.pushState("", document.title, id);
+      // if supported by the browser we can even update the URL.
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, id);
+      }
     }
-  }
+  });
 });
