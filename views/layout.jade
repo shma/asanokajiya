@@ -8,4 +8,8 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='/javascripts/min/app.js')
   body
-    block content
+    #loader-bg
+      #loading
+        img.loading.animated.rotateIn.infinite(src="images/logo.svg")
+    #main-contents
+      block content
