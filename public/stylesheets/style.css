@@ -27,7 +27,8 @@ body {
   z-index: 10000; }
 
 .logo_y {
-  width: 150px; }
+  width: 150px;
+  margin-right: 150px; }
 
 .parallaxParent > * {
   height: 100%;
@@ -112,21 +113,20 @@ body {
 
 .s3 {
   background-color: #fff;
-  max-width: 100vw;
-  min-width: 500px; }
+  max-width: 100vw; }
 
 .contactForm {
   position: relative;
   padding-bottom: 56.25%;
-  height: 0;
+  height: 80vh;
   overflow: hidden; }
 
 .contactForm iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100% !important;
-  height: 100% !important; }
+  width: 100vw !important;
+  height: 100vh !important; }
 
 .main-nav {
   display: -webkit-box;
