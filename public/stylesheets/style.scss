@@ -7,6 +7,7 @@ body {
 }
 
 .menu {
+  display:block;
   background-color: #fff;
 }
 
@@ -14,6 +15,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .main-nav  li {
@@ -32,9 +34,14 @@ body {
 }
 
 .detail-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 50px;
+  padding-top: 25px;
   width: 250px;
   margin-right: 150px;
-  margin-top: -40px;
+  z-index: 100001;
 }
 
 
@@ -88,6 +95,11 @@ body {
     top: 0;
     width: 100%;
     z-index: 10000;
+}
+.fixedBlock {
+    position: fixed;
+    top: 0;
+    z-index: 10001;
 }
 
 .black {
@@ -246,6 +258,12 @@ body {
   font-size: 18px;
 }
 
+.btn_hamburger {
+  display: none;
+  margin-top: 0px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
 
 @media screen and (max-width: 1000px) {
   body {
@@ -299,19 +317,29 @@ body {
     line-height: 180%;
   }
 
-  #menu {
+  #menu, #dMenu{
+    display: none;
   }
 
   .main-nav {
+    padding-top: 80px;
+    margin-top: 0px;
+    background-color: #000;
+    opacity: 0.75;
+    position: absolute;
     overflow: hidden;
     width: 100vw;
+    top:0;
     display: flex; /* 要素をflexboxに対応させる */
     flex-direction: column; /* 子要素の並びを上から下にする（要素の改行に対応） */
+    justify-content: center;
+
+
   }
 
   .main-nav a {
     margin: 5px;
-    color: #000;
+    color: #fff;
     display: block;
     padding: 4px;
     text-decoration: none;
@@ -325,6 +353,15 @@ body {
   }
 
   .detail-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 50px;
+    padding-top: 30px;
+    width: 250px;
+    margin-right: 150px;
+
+
     width: 150px;
     margin-top: 0px;
   }
@@ -344,7 +381,6 @@ body {
   .detail-nav a {
     margin: 0px;
     color: #fff;
-    display: block;
     padding: 10px;
     text-decoration: none;
     &:hover {
@@ -356,8 +392,84 @@ body {
     color: #fff;
     font-size: 18px;
     position:absolute;
+    padding-top: 80px;
+    background: #000;
+    opacity: 0.75;
     top:0;
     left:0;
     width:100%;
+  }
+
+  .btn_hamburger {
+      display: block;
+      width: 40px;
+      z-index: 100000;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin:16px;
+      padding-top:35px;
+      padding-right:25px;
+  }
+  .btn_hamburger a {
+      position: relative;
+      display: block;
+      height: 30px;
+      -webkit-transition: all .4s;
+      transition: all .4s;
+      box-sizing: border-box;
+  }
+  .btn_hamburger span {
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 4px;
+      -webkit-transition: all .4s;
+      transition: all .4s;
+      box-sizing: border-box;
+  }
+  .btn_hamburger span:nth-of-type(1) {
+      top: 0;
+  }
+  .btn_hamburger span:nth-of-type(2) {
+      top: 14px;
+  }
+  .btn_hamburger span:nth-of-type(3) {
+      bottom: 0;
+  }
+  .btn_hamburger span:nth-of-type(2)::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 4px;
+      -webkit-transition: all .4s;
+      transition: all .4s;
+  }
+  .btn_hamburger .active span:nth-of-type(2) {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+  }
+  .btn_hamburger .active span:nth-of-type(2)::after {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  }
+  .btn_hamburger .active span:nth-of-type(1) {
+      -webkit-transform: translateY(20px) scale(0);
+      -ms-transform: translateY(20px) scale(0);
+      transform: translateY(20px) scale(0);
+  }
+  .btn_hamburger .active span:nth-of-type(3) {
+      -webkit-transform: translateY(-20px) scale(0);
+      -ms-transform: translateY(-20px) scale(0);
+      transform: translateY(-20px) scale(0);
   }
 }

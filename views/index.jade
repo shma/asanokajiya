@@ -1,24 +1,29 @@
 extends layout
 block content
-  #trigger1.spacer.s0
   #hero.heroParent
     img.logo.animated.fadeIn(src="images/logo.svg")
-  #menu.menu
-    ul.main-nav
-      li
-        a(href="/katana") 刀 katana
-      span.separator  |
-      li
-        a(href="/samurai_knife") 侍 samurai knife
-      span.separator  |
-      li
-        a(href="/workshop") 伝 workshop
-      span.separator  |
-      li
-        a(href="/about") 匠 about
-      span.separator  |
-      li
-        a(href="#contact") 問 contact
+  #aa
+    p.btn_hamburger
+      a(href='#')
+        span
+        span
+        span
+    #menu.menu
+      ul.main-nav
+        li
+          a(href="/katana") 刀 katana
+        span.separator  |
+        li
+          a(href="/samurai_knife") 侍 samurai knife
+        span.separator  |
+        li
+          a(href="/workshop") 伝 workshop
+        span.separator  |
+        li
+          a(href="/about") 匠 about
+        span.separator  |
+        li
+          a(href="#contact", class="contact") 問 contact
   .spacer.s0
   #katana.parallaxParent
     div.parallaxBack(style='background-image: url(images/box2.jpg);background-size: cover;background-position: center;')

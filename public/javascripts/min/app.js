@@ -33165,36 +33165,53 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
   new _scrollmagic2.default.Scene({ triggerElement: "#contact" }).setTween("#contact > div", { y: "100%", ease: Linear.easeNone }).addTo(controller);
 
   var nav = (0, _jquery2.default)('#menu'),
+      hambtn = (0, _jquery2.default)('#aa'),
       offset = nav.offset();
   if (nav[0]) {
     (0, _jquery2.default)(window).scroll(function () {
       if ((0, _jquery2.default)(window).scrollTop() > offset.top) {
+        hambtn.addClass('fixed');
         nav.addClass('fixed');
+        hamburger.addClass('fixed');
       } else {
+        hamburger.removeClass('fixed');
+        hambtn.removeClass('fixed');
         nav.removeClass('fixed');
       }
     });
   }
 
   var detailNav = (0, _jquery2.default)('#dMenu'),
+      detailLogo = (0, _jquery2.default)('.detail-logo'),
       detailOffset = detailNav.offset();
   if (detailNav[0]) {
     (0, _jquery2.default)(window).scroll(function () {
       console.log(detailNav[0]);
       if ((0, _jquery2.default)(window).scrollTop() > detailOffset.top) {
         detailNav.addClass('fixed');
+        hambtn.addClass('fixed');
+        detailLogo.addClass('fixedBlock');
         detailNav.addClass('black');
       } else {
+        detailLogo.removeClass('fixedBlock');
+        hambtn.removeClass('fixed');
         detailNav.removeClass('black');
         detailNav.removeClass('fixed');
       }
     });
   }
 
-  (0, _jquery2.default)('#navToggle').click(function () {
-    //headerに .openNav を付加・削除
-    (0, _jquery2.default)('mobileMenu').toggleClass('openNav');
-  });
+  var activeClass = 'active';
+  function hamburgBtn() {
+    (0, _jquery2.default)('.btn_hamburger').on('click', function (event) {
+      var button = (0, _jquery2.default)(this);
+      event.preventDefault();
+
+      button.find('a').toggleClass(activeClass);
+      button.next().slideToggle(250);
+    });
+  };
+  hamburgBtn();
 
   var tween = TweenMax.from("#animate", 0.5, { autoAlpha: 0, scale: 0.7 });
 
@@ -33203,7 +33220,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
   });
 
   //  bind scroll to anchor links
-  (0, _jquery2.default)(document).on("click", "a[href^='#']", function (e) {
+  (0, _jquery2.default)('.contact').on("click", function (e) {
     var id = (0, _jquery2.default)(this).attr("href");
     if ((0, _jquery2.default)(id).length > 0) {
       e.preventDefault();

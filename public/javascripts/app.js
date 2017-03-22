@@ -30,12 +30,17 @@ new scrollMagic.Scene({triggerElement: "#contact"})
       .addTo(controller)
 
 var nav = $('#menu'),
+hambtn = $('#aa'),
 offset = nav.offset();
 if (nav[0]) {
   $(window).scroll(function () {
     if($(window).scrollTop() > offset.top) {
+      hambtn.addClass('fixed');
       nav.addClass('fixed');
+      hamburger.addClass('fixed');
     } else {
+      hamburger.removeClass('fixed');
+      hambtn.removeClass('fixed');
       nav.removeClass('fixed');
     }
   });
@@ -43,23 +48,37 @@ if (nav[0]) {
 
 
 var detailNav = $('#dMenu'),
+detailLogo = $('.detail-logo'),
 detailOffset = detailNav.offset();
 if (detailNav[0]) {
   $(window).scroll(function () {
     console.log(detailNav[0]);
     if($(window).scrollTop() > detailOffset.top) {
       detailNav.addClass('fixed');
+      hambtn.addClass('fixed');
+      detailLogo.addClass('fixedBlock');
       detailNav.addClass('black');
     } else {
+      detailLogo.removeClass('fixedBlock');
+      hambtn.removeClass('fixed');
       detailNav.removeClass('black');
       detailNav.removeClass('fixed');
     }
   });
 }
 
-$('#navToggle').click(function(){//headerに .openNav を付加・削除
-        $('mobileMenu').toggleClass('openNav');
-});
+var activeClass = 'active';
+function hamburgBtn() {
+    $('.btn_hamburger').on('click', function(event) {
+        var button = $(this);
+        event.preventDefault();
+
+        button.find('a').toggleClass(activeClass);
+        button.next().slideToggle(250);
+    });
+};
+hamburgBtn();
+
 
 var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
 
@@ -68,7 +87,7 @@ controller.scrollTo(function (newpos) {
 });
 
   //  bind scroll to anchor links
-  $(document).on("click", "a[href^='#']", function (e) {
+  $('.contact').on("click", function (e) {
     var id = $(this).attr("href");
     if ($(id).length > 0) {
       e.preventDefault();
