@@ -33166,14 +33166,30 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
 
   var nav = (0, _jquery2.default)('#menu'),
       offset = nav.offset();
-  (0, _jquery2.default)(window).scroll(function () {
-    console.log("scroll");
-    if ((0, _jquery2.default)(window).scrollTop() > offset.top) {
-      nav.addClass('fixed');
-    } else {
-      nav.removeClass('fixed');
-    }
-  });
+  if (nav[0]) {
+    (0, _jquery2.default)(window).scroll(function () {
+      if ((0, _jquery2.default)(window).scrollTop() > offset.top) {
+        nav.addClass('fixed');
+      } else {
+        nav.removeClass('fixed');
+      }
+    });
+  }
+
+  var detailNav = (0, _jquery2.default)('#dMenu'),
+      detailOffset = detailNav.offset();
+  if (detailNav[0]) {
+    (0, _jquery2.default)(window).scroll(function () {
+      console.log(detailNav[0]);
+      if ((0, _jquery2.default)(window).scrollTop() > detailOffset.top) {
+        detailNav.addClass('fixed');
+        detailNav.addClass('black');
+      } else {
+        detailNav.removeClass('black');
+        detailNav.removeClass('fixed');
+      }
+    });
+  }
 
   var tween = TweenMax.from("#animate", 0.5, { autoAlpha: 0, scale: 0.7 });
 

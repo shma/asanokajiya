@@ -31,14 +31,31 @@ new scrollMagic.Scene({triggerElement: "#contact"})
 
 var nav = $('#menu'),
 offset = nav.offset();
-$(window).scroll(function () {
-  console.log("scroll");
-  if($(window).scrollTop() > offset.top) {
-    nav.addClass('fixed');
-  } else {
-    nav.removeClass('fixed');
-  }
-});
+if (nav[0]) {
+  $(window).scroll(function () {
+    if($(window).scrollTop() > offset.top) {
+      nav.addClass('fixed');
+    } else {
+      nav.removeClass('fixed');
+    }
+  });
+}
+
+
+var detailNav = $('#dMenu'),
+detailOffset = detailNav.offset();
+if (detailNav[0]) {
+  $(window).scroll(function () {
+    console.log(detailNav[0]);
+    if($(window).scrollTop() > detailOffset.top) {
+      detailNav.addClass('fixed');
+      detailNav.addClass('black');
+    } else {
+      detailNav.removeClass('black');
+      detailNav.removeClass('fixed');
+    }
+  });
+}
 
 
 var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});

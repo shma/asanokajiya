@@ -2,7 +2,7 @@
 body {
   margin: 0px;
   font-size: 22px;
-  font-family: Georgia, 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  font-family: Times New Roman , "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", Hiragino Mincho ProN , "MSP明朝","MS PMincho","MS 明朝",serif;
   -webkit-font-feature-settings: "palt" 2;
           font-feature-settings: "palt" 2;
   background-color: #e6e6e6; }
@@ -61,9 +61,10 @@ body {
   color: #fff;
   font-size: 30px;
   position: absolute;
-  margin-top: 20px;
+  padding-top: 20px;
   top: 0;
-  left: 0; }
+  left: 0;
+  width: 100%; }
 
 .parallaxParent {
   width: 100vw;
@@ -80,6 +81,9 @@ body {
   top: 0;
   width: 100%;
   z-index: 10000; }
+
+.black {
+  background: #000; }
 
 .logo_y {
   width: 150px;
