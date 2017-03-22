@@ -306,7 +306,8 @@ body {
   .separator {
     display: none; }
   .detail-logo {
-    width: 250px; }
+    width: 150px;
+    margin-top: 0px; }
   .detail-nav {
     overflow: hidden;
     width: 100vw;
@@ -333,7 +334,6 @@ body {
     color: #fff;
     font-size: 18px;
     position: absolute;
-    padding-top: 20px;
     top: 0;
     left: 0;
     width: 100%; } }
