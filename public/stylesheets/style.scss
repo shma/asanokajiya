@@ -265,9 +265,9 @@ body {
   -webkit-margin-after: 0em;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   body {
-    font-size:16px;
+    font-size:18px;
   }
 
   #mobileHead {
@@ -326,7 +326,7 @@ body {
   }
 
   .main-nav {
-    padding-top: 80px;
+    padding-top: 100px;
     margin-top: 0px;
     background-color: #000;
     opacity: 0.75;
@@ -361,12 +361,9 @@ body {
     top: 0;
     left: 0;
     padding-left: 50px;
-    padding-top: 40px;
+    padding-top: 10px;
     width: 250px;
     margin-right: 150px;
-
-
-    width: 150px;
     margin-top: 0px;
   }
 
@@ -396,7 +393,7 @@ body {
     color: #fff;
     font-size: 18px;
     position:absolute;
-    padding-top: 80px;
+    padding-top: 100px;
     background: #000;
     opacity: 0.75;
     top:0;
@@ -412,7 +409,7 @@ body {
       top: 0px;
       right: 0px;
       margin:16px;
-      padding-top:35px;
+      padding-top:30px;
       padding-right:25px;
   }
   .btn_hamburger a {
