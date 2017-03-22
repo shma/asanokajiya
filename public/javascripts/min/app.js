@@ -33165,7 +33165,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
   new _scrollmagic2.default.Scene({ triggerElement: "#contact" }).setTween("#contact > div", { y: "100%", ease: Linear.easeNone }).addTo(controller);
 
   var nav = (0, _jquery2.default)('#menu'),
-      hambtn = (0, _jquery2.default)('#aa'),
+      hambtn = (0, _jquery2.default)('#mobileHead'),
       offset = nav.offset();
   if (nav[0]) {
     (0, _jquery2.default)(window).scroll(function () {
@@ -33190,6 +33190,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
       if ((0, _jquery2.default)(window).scrollTop() > detailOffset.top) {
         detailNav.addClass('fixed');
         hambtn.addClass('fixed');
+        hambtn.addClass('black');
         detailLogo.addClass('fixedBlock');
         detailNav.addClass('black');
       } else {

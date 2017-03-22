@@ -30,7 +30,7 @@ new scrollMagic.Scene({triggerElement: "#contact"})
       .addTo(controller)
 
 var nav = $('#menu'),
-hambtn = $('#aa'),
+hambtn = $('#mobileHead'),
 offset = nav.offset();
 if (nav[0]) {
   $(window).scroll(function () {
@@ -56,6 +56,7 @@ if (detailNav[0]) {
     if($(window).scrollTop() > detailOffset.top) {
       detailNav.addClass('fixed');
       hambtn.addClass('fixed');
+      hambtn.addClass('black');
       detailLogo.addClass('fixedBlock');
       detailNav.addClass('black');
     } else {
