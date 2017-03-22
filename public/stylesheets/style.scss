@@ -204,6 +204,48 @@ body {
     width: 100% !important;
     height: 100% !important;
 }
+.separator {
+  margin-top:22px;
+}
+
+
+.more {
+  color: #ff3e09;
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  &:hover {
+    color: #ff8f30;
+  }
+}
+
+#foot {
+  min-height: 150px;
+  background-color: #e6e6e6;
+}
+
+.snsLink {
+    color: #000;
+    &:visited {
+      color: #000;
+    }
+    &:hover {
+    color: #444444;
+  }
+}
+.fa {
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.aboutTable td {
+  text-align: left;
+  min-width:100px;
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
 
 @media screen and (max-width: 1000px) {
   body {
@@ -282,49 +324,40 @@ body {
     display: none;
   }
 
-
-
-}
-
-
-.separator {
-  margin-top:22px;
-}
-
-
-.more {
-  color: #ff3e09;
-  font-size: 18px;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  &:hover {
-    color: #ff8f30;
+  .detail-logo {
+    width: 250px;
   }
-}
 
-#foot {
-  min-height: 150px;
-  background-color: #e6e6e6;
-}
 
-.snsLink {
-    color: #000;
-    &:visited {
-      color: #000;
-    }
+  .detail-nav {
+    overflow: hidden;
+    width: 100vw;
+    display: flex; /* 要素をflexboxに対応させる */
+    flex-direction: column; /* 子要素の並びを上から下にする（要素の改行に対応） */
+  }
+
+  .detail-nav  li {
+    list-style: none;
+  }
+
+  .detail-nav a {
+    margin: 0px;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
     &:hover {
-    color: #444444;
+      color: #ff3e09;
+    }
   }
-}
-.fa {
-  font-size: 40px;
-  margin-left: 20px;
-}
 
-.aboutTable td {
-  text-align: left;
-  min-width:100px;
-  padding-bottom: 20px;
-  font-size: 18px;
+  .detailMenu {
+    color: #fff;
+    font-size: 18px;
+    position:absolute;
+    padding-top: 20px;
+    top:0;
+    left:0;
+    width:100%;
+  }
 }
