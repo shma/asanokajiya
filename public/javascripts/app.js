@@ -57,6 +57,9 @@ if (detailNav[0]) {
   });
 }
 
+$('#navToggle').click(function(){//headerに .openNav を付加・削除
+        $('mobileMenu').toggleClass('openNav');
+});
 
 var tween = TweenMax.from("#animate", 0.5, {autoAlpha: 0, scale: 0.7});
 

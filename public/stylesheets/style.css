@@ -210,9 +210,9 @@ body {
   width: 100% !important;
   height: 100% !important; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
   body {
-    font-size: 10px; }
+    font-size: 16px; }
   .contactForm {
     position: relative;
     padding-bottom: 56.25%;
@@ -245,7 +245,29 @@ body {
     font-size: 25px; }
   .desc p {
     font-size: 16px;
-    line-height: 180%; } }
+    line-height: 180%; }
+  .main-nav {
+    overflow: hidden;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* 要素をflexboxに対応させる */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* 子要素の並びを上から下にする（要素の改行に対応） */ }
+  .main-nav a {
+    margin: 5px;
+    color: #000;
+    display: block;
+    padding: 4px;
+    text-decoration: none; }
+    .main-nav a:hover {
+      color: #ff3e09; }
+  .separator {
+    display: none; } }
 
 .separator {
   margin-top: 22px; }

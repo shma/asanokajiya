@@ -33180,6 +33180,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
       detailOffset = detailNav.offset();
   if (detailNav[0]) {
     (0, _jquery2.default)(window).scroll(function () {
+      console.log(detailNav[0]);
       if ((0, _jquery2.default)(window).scrollTop() > detailOffset.top) {
         detailNav.addClass('fixed');
         detailNav.addClass('black');
@@ -33189,6 +33190,11 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
       }
     });
   }
+
+  (0, _jquery2.default)('#navToggle').click(function () {
+    //headerに .openNav を付加・削除
+    (0, _jquery2.default)('mobileMenu').toggleClass('openNav');
+  });
 
   var tween = TweenMax.from("#animate", 0.5, { autoAlpha: 0, scale: 0.7 });
 
