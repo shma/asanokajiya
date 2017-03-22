@@ -33180,7 +33180,6 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
       detailOffset = detailNav.offset();
   if (detailNav[0]) {
     (0, _jquery2.default)(window).scroll(function () {
-      console.log(detailNav[0]);
       if ((0, _jquery2.default)(window).scrollTop() > detailOffset.top) {
         detailNav.addClass('fixed');
         detailNav.addClass('black');

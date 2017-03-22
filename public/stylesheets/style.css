@@ -59,9 +59,9 @@ body {
 
 .detailMenu {
   color: #fff;
-  font-size: 30px;
+  font-size: 22px;
   position: absolute;
-  padding-top: 20px;
+  padding-top: 23px;
   top: 0;
   left: 0;
   width: 100%; }
@@ -83,7 +83,8 @@ body {
   z-index: 10000; }
 
 .black {
-  background: #000; }
+  background: #000;
+  opacity: 0.75; }
 
 .logo_y {
   width: 150px;
@@ -222,7 +223,15 @@ body {
     top: 0;
     left: 0;
     width: 100vw !important;
-    height: 100vh !important; } }
+    height: 100vh !important; }
+  .logo {
+    width: 200px; }
+  .logo_y {
+    width: 150px;
+    margin-right: 0px; }
+  .parallaxMenu {
+    color: #fff;
+    font-size: 30px; } }
 
 .separator {
   margin-top: 22px; }
