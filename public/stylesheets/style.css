@@ -231,7 +231,14 @@ body {
     margin-right: 0px; }
   .parallaxMenu {
     color: #fff;
-    font-size: 30px; } }
+    font-size: 30px; }
+  .aboutTable td {
+    text-align: left;
+    min-width: 100px;
+    padding-bottom: 10px;
+    font-size: 18px; }
+  .desc {
+    padding: 20px; } }
 
 .separator {
   margin-top: 22px; }
@@ -267,6 +274,5 @@ body {
 .aboutTable td {
   text-align: left;
   min-width: 100px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-size: 18px; }

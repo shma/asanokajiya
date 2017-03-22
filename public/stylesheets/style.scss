@@ -236,11 +236,16 @@ body {
     font-size: 30px;
   }
 
+  .aboutTable td {
+    text-align: left;
+    min-width:100px;
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
 
-}
-
-@media screen and (min-width:600px){
-
+  .desc  {
+    padding: 20px;
+  }
 }
 
 
@@ -282,7 +287,6 @@ body {
 .aboutTable td {
   text-align: left;
   min-width:100px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-size: 18px;
 }
