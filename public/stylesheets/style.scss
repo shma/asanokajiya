@@ -10,6 +10,70 @@ body {
   background-color: #fff;
 }
 
+.main-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.main-nav  li {
+  list-style: none;
+}
+
+.main-nav a {
+  margin: 10px;
+  color: #000;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  &:hover {
+    color: #ff3e09;
+  }
+}
+
+.detail-logo {
+  width: 250px;
+  margin-right: 150px;
+  margin-top: -40px;
+}
+
+
+.detail-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.detail-nav  li {
+  list-style: none;
+}
+
+.detail-nav a {
+  margin: 10px;
+  color: #fff;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  &:hover {
+    color: #ff3e09;
+  }
+}
+
+.detailMenu {
+  color: #fff;
+  font-size: 30px;
+  position:absolute;
+  margin-top: 20px;
+  top:0;
+  left:0;
+}
+
+@media screen and (max-width:767px) {
+  .detailMenu {
+    font-size: 8px;
+  }
+}
+
 .parallaxParent {
   width: 100vw;
   height: 100vh;
@@ -51,6 +115,32 @@ body {
   flex-direction: column; /* 子要素の並びを上から下にする（要素の改行に対応） */
   background-size: cover;
   background-position: center;
+}
+
+.katanaParent {
+  position: relative;
+  background-image: url('../images/box2.jpg');
+}
+
+.samurai_knifeParent {
+  position: relative;
+  background-image: url('../images/box3.jpg');
+}
+
+.workshopParent {
+  position: relative;
+  background-image: url('../images/box4.jpg');
+}
+.aboutParent {
+  position: relative;
+  background-image: url('../images/box5.jpg');
+}
+
+.detail {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .parallaxBack {
@@ -101,38 +191,22 @@ body {
 .contactForm {
   position: relative;
   padding-bottom: 56.25%;
-  height: 80vh;
+  height: 102vh;
   overflow: hidden;
 }
+@media screen and (max-width:767px) {
+  height: 100vh;
+}
+
 
 .contactForm iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw !important;
-    height: 100vh !important;
+    height: 102vh !important;
 }
 
-.main-nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0px;
-}
-
-.main-nav li {
-  list-style: none;
-}
-
-.main-nav a {
-  margin: 10px;
-  color: #000;
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  &:hover {
-    color: #ff3e09;
-  }
-}
 
 .separator {
   margin-top:22px;
@@ -151,7 +225,7 @@ body {
 }
 
 #foot {
-  min-height: 100px;
+  min-height: 150px;
   background-color: #e6e6e6;
 }
 
@@ -167,4 +241,12 @@ body {
 .fa {
   font-size: 40px;
   margin-left: 20px;
+}
+
+.aboutTable td {
+  text-align: left;
+  min-width:100px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  font-size: 18px;
 }

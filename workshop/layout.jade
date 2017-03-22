@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/min/app.js')
+  body
+    #main-contents
+      block content
+      #foot.s2
+        img.logo_y(src="images/logo_y.svg")
+        .sns
+          a.snsLink(href="https://www.facebook.com/taroasanokajiya/", target="_blank")
+            i.fa.fa-facebook-square
+          a.snsLink(href="https://www.instagram.com/asanokajiya/", target="_blank")
+            i.fa.fa-instagram

@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/about', about);
 app.use('/katana', katana);
-app.use('/samurai_knife', about);
+app.use('/samurai_knife', samurai_knife);
 app.use('/workshop', workshop);
 app.use('/users', users);
 
