@@ -37,9 +37,7 @@ if (nav[0]) {
     if($(window).scrollTop() > offset.top) {
       hambtn.addClass('fixed');
       nav.addClass('fixed');
-      hamburger.addClass('fixed');
     } else {
-      hamburger.removeClass('fixed');
       hambtn.removeClass('fixed');
       nav.removeClass('fixed');
     }

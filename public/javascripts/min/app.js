@@ -33172,9 +33172,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
       if ((0, _jquery2.default)(window).scrollTop() > offset.top) {
         hambtn.addClass('fixed');
         nav.addClass('fixed');
-        hamburger.addClass('fixed');
       } else {
-        hamburger.removeClass('fixed');
         hambtn.removeClass('fixed');
         nav.removeClass('fixed');
       }
