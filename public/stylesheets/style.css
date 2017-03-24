@@ -99,8 +99,7 @@ body {
   opacity: 0.75; }
 
 .logo_y {
-  width: 150px;
-  margin-right: 150px; }
+  width: 150px; }
 
 .parallaxParent > * {
   height: 100%;
@@ -284,7 +283,7 @@ body {
   .logo {
     width: 200px; }
   .logo_y {
-    width: 150px;
+    width: 100px;
     margin-right: 0px; }
   .parallaxMenu {
     color: #fff;
