@@ -33395,7 +33395,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js');
 "use strict";
 
 $(function () {
-  $("img.lazy").lazyload();
+  $("img.detail").lazyload();
   var nav = $('#menu'),
       hambtn = $('#mobileHead'),
       offset = nav.offset();

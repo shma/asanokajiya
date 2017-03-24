@@ -4,16 +4,14 @@ require('../../node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.a
 window.jQuery = window.$ = require('jquery');
 require('jquery-lazyload')
 
-
 import scrollMagic from 'scrollmagic'
 require('../../node_modules/gsap/ScrollToPlugin.js')
 
 
 "use strict";
 
-
 $(() => {
-  $("img.lazy").lazyload();
+  $("img.detail").lazyload();
   var nav = $('#menu'),
   hambtn = $('#mobileHead'),
   offset = nav.offset();
