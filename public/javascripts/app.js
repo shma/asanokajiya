@@ -11,7 +11,7 @@ require('../../node_modules/gsap/ScrollToPlugin.js')
 "use strict";
 
 $(() => {
-  $("img.detail").lazyload();
+  $("img.lazy").lazyload();
   var nav = $('#menu'),
   hambtn = $('#mobileHead'),
   offset = nav.offset();
