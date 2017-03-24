@@ -39,7 +39,7 @@ body {
   left: 0;
   padding-left: 50px;
   padding-top: 10px;
-  width: 250px;
+  width: 200px;
   margin-right: 150px;
   z-index: 100001; }
 
@@ -68,7 +68,7 @@ body {
   color: #fff;
   font-size: 22px;
   position: absolute;
-  padding-top: 23px;
+  padding-top: 6px;
   top: 0;
   left: 0;
   width: 100%; }
@@ -99,7 +99,8 @@ body {
   opacity: 0.75; }
 
 .logo_y {
-  width: 150px; }
+  width: 150px;
+  margin-right: 50px; }
 
 .parallaxParent > * {
   height: 100%;
@@ -174,7 +175,8 @@ body {
 
 .parallaxMenu {
   color: #fff;
-  font-size: 40px; }
+  font-size: 40px;
+  letter-spacing: 3px; }
 
 .s1 {
   background-color: #fff;
@@ -268,7 +270,7 @@ body {
   body {
     font-size: 18px; }
   #mobileHead {
-    min-height: 100px; }
+    min-height: 80px; }
   .contactForm {
     position: relative;
     padding-bottom: 56.25%;
@@ -341,7 +343,7 @@ body {
     left: 0;
     padding-left: 50px;
     padding-top: 10px;
-    width: 250px;
+    width: 200px;
     margin-right: 150px;
     margin-top: 0px; }
   .detail-nav {
@@ -383,7 +385,7 @@ body {
     top: 0px;
     right: 0px;
     margin: 16px;
-    padding-top: 30px;
+    padding-top: 18px;
     padding-right: 25px; }
   .btn_hamburger a {
     position: relative;
