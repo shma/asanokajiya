@@ -8,15 +8,15 @@ html
     meta(name='format-detection', content='telephone=no,address=no,email=no')
     meta(name='description', content='岐阜県羽島市で日本刀制作をしています。海外での公開鍛錬やワークショップ等国内外で活躍。日本の匠として新たな試みをしています')
     meta(name='keywords', content='日本,刀,ナイフ,伝統,鍛冶,日本の匠,Japanise')
-    meta(property='og:title', content="#{title}")
+    meta(property='og:title', content="#{contentName} | #{title}")
     meta(property='og:description', content='岐阜県羽島市で日本刀制作をしています。海外での公開鍛錬やワークショップ等国内外で活躍。日本の匠として新たな試みをしています')
-    meta(property='og:url', content='http://asanokajiya.com/')
+    meta(property='og:url', content="http://asanokajiya.com/#{contentPath}")
     meta(property='og:image', content='http://asanokajiya.com/images/box2.jpg')
-    meta(property='og:type', content='website')
-    meta(name='twitter:title', content="#{title}")
+    meta(property='og:type', content='article')
+    meta(name='twitter:title', content="#{contentName} | #{title}")
     meta(name='twitter:description', content='岐阜県羽島市で日本刀制作をしています。海外での公開鍛錬やワークショップ等国内外で活躍。日本の匠として新たな試みをしています')
-    meta(name='twitter:image', content='http://asanokajiya.com/images//images/box2.jpg')
-    title= title
+    meta(name='twitter:image', content='http://asanokajiya.com/images/box2.jpg')
+    title #{contentName} | #{title}
     link(rel='apple-touch-icon', sizes='57x57', href='/apple-touch-icon-57x57.png')
     link(rel='apple-touch-icon', sizes='60x60', href='/apple-touch-icon-60x60.png')
     link(rel='apple-touch-icon', sizes='72x72', href='/apple-touch-icon-72x72.png')
@@ -49,6 +49,36 @@ html
       ga('send', 'pageview');
   body
     #main-contents
+      .heroParent(class="#{contentPath}Parent")
+        #mobileHead
+          a(href="/")
+            img.detail-logo(src="/images/logo_y.svg")
+          .btn_hamburger
+            a(href='#')
+              span
+              span
+              span
+          #dMenu.detailMenu
+            ul.detail-nav
+              li
+                a(href="/en/katana") 刀 katana
+              span.separator  |
+              li
+                a(href="/en/samurai_knife") 侍 samurai knife
+              span.separator  |
+              li
+                a(href="/en/workshop") 伝 workshop
+              span.separator  |
+              li
+                a(href="/en/about") 匠 about
+              span.separator  |
+              li
+                a(href="/en/#contact") 問 contact
+        h2.parallaxMenu.katanaMenu= contentName
+      .spacer.s2
+        .desc
+          h2= descH2
+          p!= descP
       block content
       #foot.s2
         img.logo_y(src="/images/logo_y.svg")

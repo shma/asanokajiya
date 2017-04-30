@@ -11,6 +11,7 @@ var about = require('./routes/about');
 var katana = require('./routes/katana');
 var samurai_knife = require('./routes/samurai_knife');
 var workshop = require('./routes/workshop');
+var en = require('./routes/en');
 
 var app = express();
 
@@ -32,22 +33,23 @@ app.use('/katana', katana);
 app.use('/samurai_knife', samurai_knife);
 app.use('/workshop', workshop);
 app.use('/users', users);
+app.use('/en', en);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  res.status(404).render('error_404', {  title: '浅野鍛冶屋' });
+    var err = new Error('Not Found');
+    res.status(404).render('error_404', { title: '浅野鍛冶屋' });
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;

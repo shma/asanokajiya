@@ -1,0 +1,70 @@
+extends layout
+block content
+  #hero.heroParent.animated.fadeIn
+    img.logo.animated.fadeIn(src="images/logo.svg")
+    img.logo.animated.fadeIn(src="images/logo_jp.svg")
+  #mobileHead
+    p.btn_hamburger
+      a(href='#')
+        span
+        span
+        span
+    #menu.menu
+      ul.main-nav
+        li
+          a(href="/en/katana") 刀 katana
+        span.separator  |
+        li
+          a(href="/en/samurai_knife") 侍 samurai knife
+        span.separator  |
+        li
+          a(href="/en/workshop") 伝 workshop
+        span.separator  |
+        li
+          a(href="/en/about") 匠 about
+        span.separator  |
+        li
+          a(href="/en#contact", class="contact") 問 contact
+        span.separator  |
+        li
+          a(href="/") JP
+  .spacer.s0
+  #katana.parallaxParent.animated.fadeIn
+    div.parallaxBack(style='background-image: url(images/box2.jpg);background-size: cover;background-position: center;')
+      h2.parallaxMenu.katanaMenu 刀 katana
+  .spacer.s2
+    .desc
+      h2 Swordsmith Fusataro 
+      p Founded in Seki city, Gifu pref. in 2004, relocated to Hashima City, Gifu pref. in 2006. In 2012 he was invited to domestic and foreign countries, starting with openstudio of Japanese sword in France, and conducted international exchange with smiths, curators and researchers around the world. Japanese swordsmith with the world's oldest technique and highest black smithing technique shown required, and cooperates with the research of steel etc. with the knowledge of  his spirit of exploration.
+      a.more(href="/en/katana") See More
+  #samurai.parallaxParent.animated.fadeIn
+    div.parallaxBack(style='background-image: url(images/box3.JPG);background-size: cover;background-position: center;')
+      h2.parallaxMenu 侍 samurai knife
+  .spacer.s2
+    .desc
+      h2 Traditional technology for familiar kitchen
+      p Samurai knife is a traditional Japanese sword technique, carefully forged by hand using pine charcoal, adjusted to the hands, finished with Asanokajiiya original hilt attached. And in the spring of 2017, we added a forge to specialize in knife making.
+      a.more(href="/en/samurai_knife") See More
+  #workshop.parallaxParent.animated.fadeIn
+    div.parallaxBack(style='background-image: url(images/box4.JPG);background-size: cover;background-position: center;')
+      h2.parallaxMenu 伝 workshop
+  .spacer.s2
+    .desc
+      h2 Learning from the swordsmith, traditional techniques
+      p You can challenge the work such as stretching with a hammer, adjusting with a file, blading, quenching and sharpening. A moving experience is waiting for metal to be reborn as a knife. Forging a knife requires a lot of process and time, but it will be completed in just one day (about 7 hours). Swordsmith will teach for beginner in an easy-to-understand manner. Let's surround the table with lunch. Please ask anything such as the work of a sword and knife making tips. It is a samurai knife making experience to learn and enjoying.
+      a.more(href="/en/workshop") See More
+  #about.parallaxParent.animated.fadeIn
+    div.parallaxBack(style='background-image: url(images/box5.jpg);background-size: cover;background-position: center;')
+      h2.parallaxMenu 匠 about
+  .spacer.s2
+    .desc
+      h2 ASANO KAJIYA
+      p 501-6236 Gifu prefecture Hashima-city Egira-cho 454-1 Phone: 058 374 3818
+      p "Development of products specializing in Japanese forging technique" "Technical cooperation of the world's highest peak smithing technique" "Successor training activity" "Promotion of Japanese sword culture to international society" "Contribution to community"
+      a.more(href="/en/about") See More
+  #contact.parallaxParent.animated.fadeIn
+    div.parallaxBack(style='background-image: url(images/box6.jpg);background-size: cover;background-position: center;')
+      h2.parallaxMenu 問 contact
+  .spacer.s3.animated.fadeIn
+    .contactForm
+      iframe(src='https://docs.google.com/forms/d/e/1FAIpQLSektNdelJ24-CT961eHeM-ycXlJqam2RgYf4meayB9MawlZvg/viewform?embedded=true', frameborder='0', marginheight='0', marginwidth='0') &#x8mobileHeadD;&#x307F;&#x8FBC;&#x3093;&#x3067;&#x3044;&#x307E;&#x3059;...
