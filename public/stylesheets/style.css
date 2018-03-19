@@ -179,7 +179,7 @@ body {
     background-image: url("../images/box2.jpg");
 }
 
-.samurai_knifeParent {
+.kitchen_knifeParent {
     position: relative;
     background-image: url("../images/box3.JPG");
 }
@@ -307,9 +307,18 @@ body {
     color: #ff8f30;
 }
 
+.more-kitchen {
+    color: #ff3e09;
+    font-size: 18px;
+}
+
+.more-kitchen:hover {
+    color: #ff8f30;
+}
+
 #foot {
     min-height: 150px;
-    background-color: #e6e6e6;
+    background-color: #808080;
 }
 
 .snsLink {

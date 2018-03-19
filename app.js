@@ -9,7 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var about = require('./routes/about');
 var katana = require('./routes/katana');
-var samurai_knife = require('./routes/samurai_knife');
+var kitchen_knife = require('./routes/kitchen_knife');
 var workshop = require('./routes/workshop');
 var en = require('./routes/en');
 
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/about', about);
 app.use('/katana', katana);
-app.use('/samurai_knife', samurai_knife);
+app.use('/kitchen_knife', kitchen_knife);
 app.use('/workshop', workshop);
 app.use('/users', users);
 app.use('/en', en);
@@ -38,7 +38,7 @@ app.use('/en', en);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
-    res.status(404).render('error_404', { title: '浅野鍛冶屋' });
+    res.status(404).render('error_404', { title: '淺野鍛冶屋' });
 });
 
 // error handler
