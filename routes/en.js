@@ -15,7 +15,7 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/kitchen_knife', function(req, res, next) {
-    res.render('en/kitchen_knife', { isEn: true, title: '淺野鍛冶屋', contentPath: 'kitchen_knife', contentName: '侍  kitchen knife', descH2: 'Traditional technology for familiar kitchen', descP: 'Samurai knife is a traditional Japanese sword technique, carefully forged by hand using pine charcoal, adjusted to the hands, finished with Asanokajiiya original hilt attached. And in the spring of 2017, we added a forge to specialize in knife making.<br><br><a class="more-kitchen" href="https://www.samuraiknife-japan.com/">［Asano\'s knife］https://www.samuraiknife-japan.com/</a>' });
+    res.render('en/kitchen_knife', { isEn: true, title: '淺野鍛冶屋', contentPath: 'kitchen_knife', contentName: '侍  kitchen knife', descH2: 'Traditional technology for familiar kitchen', descP: 'Samurai knife is a traditional Japanese sword technique, carefully forged by hand using pine charcoal, adjusted to the hands, finished with Asanokajiiya original hilt attached. And in the spring of 2017, we added a forge to specialize in knife making.<br><br><a class="more-kitchen" target="_blank" href="https://www.samuraiknife-japan.com/">［Asano\'s knife］https://www.samuraiknife-japan.com/</a>' });
 });
 
 router.get('/workshop', function(req, res, next) {
